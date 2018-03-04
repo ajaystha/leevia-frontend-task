@@ -1,0 +1,32 @@
+// Transform
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+
+// Skew
+@mixin skew ($x, $y) {
+   @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+
+// Box shadow
+@mixin box-shadow($x, $y, $offset, $color) {
+    $ie-color: ie-hex-str($color);
+
+    -webkit-box-shadow: $x $y $offset $color;
+    box-shadow: $x $y $offset $color;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=#{$x}, OffY=#{$y}, Color='#{$ie-color}');
+}
+
+
+// Border radous
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}

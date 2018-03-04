@@ -1,0 +1,36 @@
+<div class="nav">
+
+    <div class="logo">
+        <a routerLink=""><img src="../../assets/images/logo.png"></a>
+    </div>
+
+    <div class="spacer"></div>
+
+    <label for="toggle">&#9776;</label>
+    <input [(ngModel)]="isChecked" type="checkbox" id="toggle">
+
+    <div class="menu">
+        <a routerLink="/partecipa"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{exact: true}"
+            (click)="isChecked=false">Partecipa</a>
+
+            <a routerLink="/premi"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{exact: true}"
+            (click)="isChecked=false">Premi</a>
+
+        <a routerLink="/video"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{exact: true}"
+            (click)="isChecked=false">Video</a>
+
+        <a routerLink="/partecipanti"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{exact: true}"
+            (click)="isChecked=false">Partecipanti</a>
+
+        <a target="_blank" href="./assets/pdf/regulation.pdf">Regolamento</a>
+    </div>
+
+</div>

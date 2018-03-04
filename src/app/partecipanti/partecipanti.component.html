@@ -1,0 +1,21 @@
+<!-- Diagonal background -->
+<div class="diagonal__bg"></div>
+
+
+<div class="partecipanti-container">
+
+    <header>
+        <h1 class="page__title partecipanti__title">Partecipanti</h1>
+    </header>
+
+    <div class="page__description partecipanti__subtitle">La top 10 dei partecipanti, sei tra di loro?</div>
+
+    <div class="partecipanti-content">
+        <ng-container *ngIf="!isError">
+            <app-user-list *ngFor="let user of users, let i = index;" [user]="user" [userIndex]="i"></app-user-list>
+        </ng-container>
+
+        <div *ngIf="isError" class="error"><strong><u>Error User</u></strong>: {{ errMessage }}</div>
+    </div>
+
+</div>

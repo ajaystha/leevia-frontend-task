@@ -1,0 +1,48 @@
+@import '~assets/scss/mixins';
+
+.user-list {
+    list-style-type: none;
+    margin-bottom: 20px;
+
+    li {
+        display: flex;
+        align-items: center;
+
+        .user__index {
+            font-size: 2.6em;
+            font-weight: 700;
+        }
+
+        .user__avatar {
+            width: 75px;
+            height: 75px;
+            @include border-radius(50%);
+            margin: {
+                right: 25px;
+                left: 25px;
+            }
+        }
+
+        .user__name {
+            font-size: 1.5em;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+
+    }
+}
+
+
+// @media only screen and (max-width:767px) {
+
+//     .user-list {
+//         li {
+//             .user__name {
+//                 font-size: 1.2em;
+//                 text-transform: capitalize;
+//                 font-weight: 500;
+//             }
+//         }
+//     }
+
+// }

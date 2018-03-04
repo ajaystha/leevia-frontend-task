@@ -1,0 +1,131 @@
+@import '~assets/scss/_mixins';
+
+.form-container {
+    background: white;
+    border: 2px solid #003366;
+    @include border-radius(6px);
+    max-width: 350px;
+    min-height: 600px;
+    padding: 15px 10px;
+
+    .submitted {
+        font-size: 1.6em;
+        font-weight: 500;
+        padding: {
+            top: 100px;
+            right: 45px;
+            left: 45px;
+        }
+    }
+
+    label {
+        font-size: 0.7em;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=date],
+    select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        @include border-radius(0);
+        box-sizing: border-box;
+        font-size: 0.85em;
+        margin: {
+            top: 6px;
+            bottom: 7px;
+        }
+    }
+
+    select {
+        @include border-radius(3px);
+        background: none;
+    }
+
+    .terms {
+        font-size: 0.5em;
+        margin-top: 15px;
+
+        a { color: inherit; }
+    }
+
+    .terms-radio {
+        margin-top: 10px;
+
+        .radio {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            padding-left: 25px;
+
+            .radio--label {
+                font-size: 1.3em;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+
+            input {
+                position: relative;
+                z-index: -1;
+                opacity: 0;
+
+                &:checked {
+                    ~ .radio__indicator {
+                        background: #33a1fa;
+                        border: none;
+                        width: 18px;
+                        height: 18px;
+
+                        &::after {
+                            display: block;
+                            top: 6px;
+                            left: 6px;
+                            width: 6px;
+                            height: 6px;
+                            @include border-radius(50%);
+                            background: #FFF;
+                        }
+                    }
+                }
+            }
+
+            .radio__indicator {
+                position: absolute;
+                top: 2px;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                background: #fff;
+                border: 1px solid #777;
+                @include border-radius(50%);
+
+                &::after {
+                    position: absolute;
+                    display: none;
+                    content: "";
+                }
+
+            }
+        }
+    }
+
+    #btn-submit {
+        display: block;
+        border: 0;
+        background: #fccf6d;
+        @include box-shadow(0, 0, 0, #fff);
+        @include border-radius(0);
+        width: 100%;
+        line-height: 40px;
+        margin-top: 30px;
+        text-align: center;
+        color: #001e42;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}

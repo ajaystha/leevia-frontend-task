@@ -1,0 +1,12 @@
+
+<ul class="user-list">
+    <li>
+        <span class="user__index">{{ userIndex + 1 }}</span>
+
+        <img class="user__avatar" [src]="userDetails ? userDetails.avatar_url : ''">
+
+        <span class="user__name">
+            {{ userDetails ? userDetails.name : '' }}
+        </span>
+    </li>
+</ul>

@@ -1,8 +1,8 @@
 
 .diagonal__bg {
     // height: calc(100vh - 28%);
-    min-height: calc(100% - 28%);
-    top: 28%;
+    min-height: calc(100% - 14%);
+    top: 14%;
 }
 
 
@@ -44,6 +44,7 @@
         .error {
             font-size: 1.5em;
             text-align: center;
+            min-height: 850px;
         }
 
     }
@@ -60,8 +61,8 @@
 
 @media only screen and (max-width:599px) {
     .diagonal__bg {
-        min-height: calc(100% - 20%);
-        top: 20%;
+        min-height: calc(100% - 10%);
+        top: 10%;
     }
 
     .partecipanti-container{
